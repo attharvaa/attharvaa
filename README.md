@@ -1,10 +1,44 @@
-- 👋 Hi, I’m @attharvaa
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
+- �#include <iostream>
+using namespace std; 
+template <typename T>
+class Calculator
+{
+private:
+	T num1, num2;
+public:
+	Calculator(T n1, T n2)
+	{	num1 = n1;
+		num2 = n2;
+	}
+	void displayResult()
+	{
+		cout << "Numbers are: " << num1 << " and " << num2 << "." << endl;
+		cout << "Addition is: " << add() << endl;
+		cout << "Subtraction is: " << subtract() << endl;
+		cout << "Product is: " << multiply() << endl;
+		cout << "Division is: " << divide() << endl;
+	}
+	T add() { return num1 + num2; }
+	T subtract() { return num1 - num2; }
+	T multiply() { return num1 * num2; }
+	T divide() { return num1 / num2; }
+};
 
-<!---
+int main()
+{
+	Calculator<int> intCalc(2, 1);
+	Calculator<float> floatCalc(2.4, 1.2);
+	
+	cout << "Int results:" << endl;
+	intCalc.displayResult();
+	
+	cout << endl << "Float results:" << endl;
+	floatCalc.displayResult();
+	
+	return 0;
+}
+
+
 attharvaa/attharvaa is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
 --->
